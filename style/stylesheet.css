@@ -15,8 +15,8 @@ body, html {
 	position: fixed;
 	background-color: #000000;
 	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
 	top: 0;
 	height: 100%;
 	width: 100%;
@@ -47,9 +47,9 @@ body, html {
 	margin: 0;
 	padding: 0;
 	-moz-user-select: none;
-    -webkit-touch-callout: none;
+	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-    -khtml-user-select: none;
+	-khtml-user-select: none;
 	-ms-user-select:none;	
 	-o-user-select:none;
 	user-select:none;
@@ -60,7 +60,7 @@ body, html {
 	background-color: #000000;
 	float: left;
 	position: relative;
-    display: inline-block;
+	display: inline-block;
 }
 
 .menuBarItem > .menuBarSubMenu {
@@ -267,21 +267,21 @@ a:not([href]) {
 }
 
 h1 {
-    display: block;
-    font-size: 1.5em;
+	display: block;
+	font-size: 1.5em;
 	margin-left: -0.25rem;
-    margin-top: -0.1rem;
-    margin-bottom: 0.25rem;
-    font-weight: bold;
+	margin-top: -0.1rem;
+	margin-bottom: 0.25rem;
+	font-weight: bold;
 	text-align: left;
 }
 
 h2 { 
-    display: block;
-    font-size: 1.25em;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: bold;
+	display: block;
+	font-size: 1.25em;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
 	text-align: left;
 }
 
@@ -316,4 +316,21 @@ th, td {
 .inverted {
 	filter: hue-rotate(180deg) invert(100%) saturate(10000%);
 }
+
+.largeLink {
+	width: 43.8rem;
+	border: 0.1rem solid #606060;
+	padding: 0.5rem;
+	margin-top: 1.25rem;
+	margin-bottom: 0.75rem;
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.largeLink:hover {
+	background-color: #202020;
+	transition: all 0.5s ease-in-out;
+}
+
 
