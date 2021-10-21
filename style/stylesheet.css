@@ -1,0 +1,319 @@
+html {
+	overflow-y: scroll;
+	background-color: #000000;
+}
+
+body, html {
+	margin: 0;
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #C0C0C0;
+	font-size: 100%;
+}
+
+.background {
+	z-index: -1;
+	position: fixed;
+	background-color: #000000;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	/*filter: blur(0.15vmax);
+	transform: scale(1.05);*/
+}
+
+@media all and (min-device-width: 1050px) {
+	.background {
+		background-image: url("/images/background.orig.jpg");
+	}
+}
+
+@media not all and (min-device-width: 1050px) {
+	.background {
+		background-image: url("/images/background.jpg");
+	}
+}
+
+.menuBar {
+	z-index: 1000;
+	background-color: #000000;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	-moz-user-select: none;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+	-ms-user-select:none;	
+	-o-user-select:none;
+	user-select:none;
+}
+
+.menuBarItem {
+	white-space: nowrap;
+	background-color: #000000;
+	float: left;
+	position: relative;
+    display: inline-block;
+}
+
+.menuBarItem > .menuBarSubMenu {
+	z-index: 1000;
+	overflow: hidden;
+	min-width: 100%;
+	display: block;
+	background-color: #000000;
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;	
+	max-height: 0px;
+	transition: all 0.5s ease-in-out;
+}
+
+.menuBarItem:hover > .menuBarSubMenu {
+	max-height: 15rem;
+	transition: all 0.5s ease-in-out;
+}
+
+.menuBar a {
+	width: 100%;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+}
+
+.menuBar a:hover {
+	background-color: #202020;
+	transition: all 0.5s ease-in-out;
+}
+
+.menuBarIcon {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 2.5rem;
+}
+
+.menuBarTitle {
+	display: inline-block;
+	height: 2.5rem;
+	font-size: 1rem;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 2.5rem;
+	margin-right: 1rem;
+}
+
+.contentContainer {
+	padding: 2rem;
+	text-align: center;
+}
+
+.content {
+	max-width: 45rem;
+	text-align: justify;
+	display: inline-block;
+	background-color: #000000;
+	opacity: 0.9;
+	padding: 0.75rem 1.25rem;
+	border-radius: 0.25rem;
+	overflow: hidden;
+}
+
+.fullScreenContainer {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+}
+
+.fullScreen {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+.iframe {
+	width: 45rem;
+	height: 80vh;
+	border: none;
+}
+
+@media all and (max-aspect-ratio: 5/4) {
+	.menuBar {
+		overflow: hidden;
+		height: 100%;
+		max-width: 2.5rem;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.menuBar:hover {
+		max-width: 20rem;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.menuBarItem {
+		clear: left;
+		width: 100%;
+	}
+	
+	.menuBarSubMenu .menuBarIcon {
+		margin-left: 1.5rem;
+	}
+	
+	.contentContainer {
+		padding-left: 3.5rem;
+	}
+	
+	.fullScreenContainer {
+		left: 2.5rem;
+	}
+	
+}
+
+@media not all and (max-aspect-ratio: 5/4) {
+	.menuBar {
+		width: 100%;
+	}
+	
+	.menuBarItem > .menuBarSubMenu {
+		position: absolute;
+	}	
+	
+	.menuBarTitle {
+		margin-left: -0.5rem;
+	}
+	
+	.contentContainer {
+		padding-top: 3.5rem;
+	}
+	
+	.fullScreenContainer {
+		top: 2.5rem;
+	}
+	
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.fullHeight {
+	height: 100%;
+}
+
+.icon {
+	text-align: center;
+	height: 1em;
+	width: 1em;
+}
+
+.tableMenu td {
+	text-align: center;
+	width: 33.33%;
+}
+
+.tableMenu td:first-Child {
+	text-align: left;
+	width: 33.34%;
+}
+
+.tableMenu td:last-Child {
+	text-align: right;
+	width: 33.33%;
+}
+
+a:link {
+	color: #C0C0C0;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+a:visited {
+	color: #C0C0C0;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+a:not([href]) {
+	cursor: default;
+}
+
+.line {
+	border-top: 0.1rem solid #C0C0C0;
+	margin-left: -1.25rem;
+	margin-right: -1.25rem;
+	padding-bottom: 0.5em;
+}
+
+h1 {
+    display: block;
+    font-size: 1.5em;
+	margin-left: -0.25rem;
+    margin-top: -0.1rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+	text-align: left;
+}
+
+h2 { 
+    display: block;
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+	text-align: left;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+th, td {
+	 padding: 0.1rem 0;
+	 margin: 0;
+}
+
+.tableBorder {
+	border: 0.1rem solid #C0C0C0;
+	border-radius: 0.25rem;
+	background: #000000;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+.table {
+	border: 0.05rem solid #C0C0C0;
+}
+
+.monospace {
+	font-family: Monaco, monospace;
+	font-size: 1.1rem;
+}
+
+.inverted {
+	filter: hue-rotate(180deg) invert(100%) saturate(10000%);
+}
+
