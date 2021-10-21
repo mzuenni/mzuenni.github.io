@@ -318,7 +318,6 @@ th, td {
 }
 
 .largeLink {
-	width: 43.8rem;
 	border: 0.1rem solid #606060;
 	padding: 0.5rem;
 	margin-top: 1.25rem;
@@ -331,6 +330,13 @@ th, td {
 .largeLink:hover {
 	background-color: #202020;
 	transition: all 0.5s ease-in-out;
+}
+
+.stretch {
+	width: 45rem;
+	height: 0px;
+	overflow: hidden;
+	display: table-cell;
 }
 
 
